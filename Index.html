@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Mkhaliphi | Resume</title>
+
+<style>
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+:root{
+--bg:#f5f7fb;
+--card:#ffffff;
+--text:#1f2937;
+--muted:#6b7280;
+--accent:#2563eb;
+--accent-soft:#dbeafe;
+--border:#e5e7eb;
+--shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#eef2ff,#f8fafc);
+color:var(--text);
+line-height:1.6;
+padding:24px;
+}
+
+.resume{
+max-width:1100px;
+margin:auto;
+background:var(--card);
+border-radius:20px;
+overflow:hidden;
+box-shadow:var(--shadow);
+border:1px solid var(--border);
+}
+
+.topbar{
+display:grid;
+/* Changed to 3 columns: Photo, Name/Summary, Quick Info */
+grid-template-columns: 180px 2fr 1fr; 
+gap:24px;
+padding:40px;
+background:linear-gradient(135deg,#1d4ed8,#2563eb,#3b82f6);
+color:white;
+align-items: center;
+}
+
+/* Photo Styling */
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background: #fff; /* Fallback color */
+}
+
+.name{
+font-size:2.6rem;
+font-weight:700;
+margin-bottom:8px;
+}
+
+.role{
+font-size:1.1rem;
+margin-bottom:16px;
+}
+
+.summary{
+max-width:700px;
+font-size:0.98rem;
+}
+
+.quick-info{
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.18);
+border-radius:16px;
+padding:18px;
+}
+
+.content{
+display:grid;
+grid-template-columns:320px 1fr;
+}
+
+.sidebar{
+background:#f8fafc;
+border-right:1px solid var(--border);
+padding:32px 24px;
+}
+
+.main{
+padding:32px;
+}
+
+.section{
+margin-bottom:30px;
+}
+
+.section-title{
+display:inline-block;
+font-size:1rem;
+font-weight:700;
+color:var(--accent);
+background:var(--accent-soft);
+padding:8px 14px;
+border-radius:999px;
+margin-bottom:16px;
+}
+
+.info-list,
+.skills-list,
+.details-list{
+list-style:none;
+}
+
+.label{
+font-weight:700;
+display:block;
+}
+
+.muted{
+color:var(--muted);
+}
+
+.skills-list{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skills-list li{
+background:white;
+border:1px solid var(--border);
+border-radius:999px;
+padding:8px 12px;
+font-size:0.9rem;
+}
+
+.item{
+padding:18px;
+border:1px solid var(--border);
+border-radius:16px;
+margin-bottom:16px;
+background:#fff;
+}
+
+.item-header{
+display:flex;
+justify-content:space-between;
+margin-bottom:6px;
+}
+
+.subtitle{
+color:var(--accent);
+font-weight:600;
+margin-bottom:6px;
+}
+
+.item ul{
+padding-left:18px;
+color:var(--muted);
+}
+
+.toolbar{
+max-width:1100px;
+margin:auto;
+margin-bottom:15px;
+display:flex;
+justify-content:flex-end;
+gap:10px;
+}
+
+button{
+border:none;
+padding:10px 16px;
+border-radius:10px;
+cursor:pointer;
+font-weight:700;
+}
+
+.primary-btn{
+background:var(--accent);
+color:white;
+}
+
+.secondary-btn{
+background:white;
+border:1px solid var(--border);
+}
+
+@media(max-width:900px){
+.topbar,
+.content{
+grid-template-columns:1fr;
+text-align: center;
+}
+
+.profile-pic-container {
+    margin-bottom: 20px;
+}
+
+.sidebar{
+border-right:none;
+border-bottom:1px solid var(--border);
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="toolbar">
+<button class="secondary-btn" onclick="toggleTheme()">Toggle Theme</button>
+<button class="primary-btn" onclick="window.print()">Download Resume</button>
+</div>
+
+<div class="resume">
+
+<header class="topbar">
+<div class="profile-pic-container">
+    <img src="gift.jpg" alt="Gift Mkhaliphi" class="profile-pic">
+</div>
+
+<div>
+<h1 class="name">Gift Mkhaliphi</h1>
+<p class="role">Student | Asia University</p>
+
+<p class="summary">
+Motivated university student passionate about technology, learning, and personal development. 
+Currently studying at Asia University and building skills in teamwork, communication, and computer literacy while preparing for future professional opportunities.
+</p>
+</div>
+
+<div class="quick-info">
+<h3>Quick Profile</h3>
+<p><b>School:</b> Asia University</p>
+<p><b>Student ID:</b> 114021104</p>
+<p><b>Status:</b> Active Student</p>
+<p><b>Location:</b> Taichung, Taiwan</p>
+</div>
+
+</header>
+
+<div class="content">
+
+<aside class="sidebar">
+
+<section class="section">
+<div class="section-title">Contact</div>
+
+<ul class="info-list">
+
+<li>
+<span class="label">Phone</span>
+<span class="muted">123456789</span>
+</li>
+
+<li>
+<span class="label">Email</span>
+<span class="muted">ice632069@gmail.com</span>
+</li>
+
+<li>
+<span class="label">Address</span>
+<span class="muted">Taichung, Taiwan</span>
+</li>
+
+<li>
+<span class="label">LinkedIn</span>
+<span class="muted">linkedin.com/in/gift-mkhaliphi</span>
+</li>
+
+</ul>
+</section>
+
+<section class="section">
+<div class="section-title">Skills</div>
+
+<ul class="skills-list">
+<li>Communication</li>
+<li>Teamwork</li>
+<li>Problem Solving</li>
+<li>Time Management</li>
+<li>Research</li>
+<li>Computer Skills</li>
+<li>Adaptability</li>
+<li>Critical Thinking</li>
+</ul>
+</section>
+
+<section class="section">
+<div class="section-title">Languages</div>
+<ul class="details-list">
+<li>English</li>
+<li>French</li>
+</ul>
+</section>
+
+<section class="section">
+<div class="section-title">Interests</div>
+<ul class="details-list">
+<li>Technology</li>
+<li>Learning</li>
+<li>Leadership</li>
+<li>Innovation</li>
+</ul>
+</section>
+
+</aside>
+
+<main class="main">
+
+<section class="section">
+<div class="section-title">Education</div>
+
+<div class="item">
+<div class="item-header">
+<h4>Asia University</h4>
+<span>Current</span>
+</div>
+
+<div class="subtitle">University Student</div>
+
+<ul>
+<li>Pursuing higher education at Asia University.</li>
+<li>Developing academic and professional skills.</li>
+<li>Participating in coursework, presentations, and collaborative assignments.</li>
+</ul>
+</div>
+
+</section>
+
+<section class="section">
+<div class="section-title">Experience</div>
+
+<div class="item">
+
+<div class="item-header">
+<h4>Student Team Contributor</h4>
+<span>Current</span>
+</div>
+
+<div class="subtitle">Asia University</div>
+
+<ul>
+<li>Collaborated with classmates on academic presentations and projects.</li>
+<li>Developed teamwork and communication skills through group assignments.</li>
+<li>Managed coursework deadlines while maintaining consistent academic progress.</li>
+</ul>
+
+</div>
+
+<div class="item">
+
+<div class="item-header">
+<h4>Independent Learner</h4>
+<span>Ongoing</span>
+</div>
+
+<div class="subtitle">Self Development</div>
+
+<ul>
+<li>Continuously improving computer and research skills.</li>
+<li>Practicing discipline and responsibility in academic work.</li>
+<li>Focused on personal growth and career preparation.</li>
+</ul>
+
+</div>
+
+</section>
+
+<section class="section">
+<div class="section-title">Projects</div>
+
+<div class="item">
+
+<div class="item-header">
+<h4>Personal Resume Website</h4>
+<span>2026</span>
+</div>
+
+<div class="subtitle">HTML, CSS, JavaScript</div>
+
+<ul>
+<li>Developed a personal resume website using a single HTML file.</li>
+<li>Designed a responsive layout using CSS.</li>
+<li>Added JavaScript functionality for theme switching and printing.</li>
+</ul>
+
+</div>
+
+<div class="item">
+
+<div class="item-header">
+<h4>Academic Coursework Projects</h4>
+<span>Current</span>
+</div>
+
+<div class="subtitle">University Projects</div>
+
+<ul>
+<li>Completed course assignments and academic presentations.</li>
+<li>Applied research and analytical skills during coursework.</li>
+<li>Strengthened independent learning and organization abilities.</li>
+</ul>
+
+</div>
+
+</section>
+
+<section class="section">
+<div class="section-title">Achievements & Certifications</div>
+
+<div class="item">
+
+<ul>
+<li>Admitted and enrolled at Asia University, Taiwan.</li>
+<li>Successfully developed a personal resume website project.</li>
+<li>Built strong collaboration and communication skills through academic teamwork.</li>
+<li>Actively improving computer and digital literacy skills.</li>
+</ul>
+
+</div>
+
+</section>
+
+<section class="section">
+<div class="section-title">References</div>
+
+<div class="item">
+<p class="muted">Available upon request.</p>
+</div>
+
+</section>
+
+</main>
+
+</div>
+</div>
+
+<script>
+function toggleTheme(){
+const root=document.documentElement
+const current=getComputedStyle(root).getPropertyValue('--bg').trim()
+
+if(current==='#f5f7fb'){
+root.style.setProperty('--bg','#0f172a')
+root.style.setProperty('--card','#111827')
+root.style.setProperty('--text','#f9fafb')
+root.style.setProperty('--muted','#cbd5e1')
+root.style.setProperty('--border','#334155')
+document.body.style.background='linear-gradient(135deg,#0f172a,#111827)'
+}else{
+root.style.setProperty('--bg','#f5f7fb')
+root.style.setProperty('--card','#ffffff')
+root.style.setProperty('--text','#1f2937')
+root.style.setProperty('--muted','#6b7280')
+root.style.setProperty('--border','#e5e7eb')
+document.body.style.background='linear-gradient(135deg,#eef2ff,#f8fafc)'
+}
+}
+</script>
+
+</body>
+</html>
