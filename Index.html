@@ -6,7 +6,6 @@
 <title>Gift Mkhaliphi | Resume</title>
 
 <style>
-
 *{
 box-sizing:border-box;
 margin:0;
@@ -44,11 +43,29 @@ border:1px solid var(--border);
 
 .topbar{
 display:grid;
-grid-template-columns:2fr 1fr;
+/* Changed to 3 columns: Photo, Name/Summary, Quick Info */
+grid-template-columns: 180px 2fr 1fr; 
 gap:24px;
 padding:40px;
 background:linear-gradient(135deg,#1d4ed8,#2563eb,#3b82f6);
 color:white;
+align-items: center;
+}
+
+/* Photo Styling */
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background: #fff; /* Fallback color */
 }
 
 .name{
@@ -186,19 +203,21 @@ border:1px solid var(--border);
 }
 
 @media(max-width:900px){
-
 .topbar,
 .content{
 grid-template-columns:1fr;
+text-align: center;
+}
+
+.profile-pic-container {
+    margin-bottom: 20px;
 }
 
 .sidebar{
 border-right:none;
 border-bottom:1px solid var(--border);
 }
-
 }
-
 </style>
 </head>
 
@@ -212,6 +231,9 @@ border-bottom:1px solid var(--border);
 <div class="resume">
 
 <header class="topbar">
+<div class="profile-pic-container">
+    <img src="gift.jpg" alt="Gift Mkhaliphi" class="profile-pic">
+</div>
 
 <div>
 <h1 class="name">Gift Mkhaliphi</h1>
@@ -431,36 +453,26 @@ Currently studying at Asia University and building skills in teamwork, communica
 </div>
 
 <script>
-
 function toggleTheme(){
-
 const root=document.documentElement
 const current=getComputedStyle(root).getPropertyValue('--bg').trim()
 
 if(current==='#f5f7fb'){
-
 root.style.setProperty('--bg','#0f172a')
 root.style.setProperty('--card','#111827')
 root.style.setProperty('--text','#f9fafb')
 root.style.setProperty('--muted','#cbd5e1')
 root.style.setProperty('--border','#334155')
-
 document.body.style.background='linear-gradient(135deg,#0f172a,#111827)'
-
 }else{
-
 root.style.setProperty('--bg','#f5f7fb')
 root.style.setProperty('--card','#ffffff')
 root.style.setProperty('--text','#1f2937')
 root.style.setProperty('--muted','#6b7280')
 root.style.setProperty('--border','#e5e7eb')
-
 document.body.style.background='linear-gradient(135deg,#eef2ff,#f8fafc)'
-
 }
-
 }
-
 </script>
 
 </body>
